@@ -11,25 +11,25 @@
 
 💻 Passionate about **software development, electronics, AI, and machine learning**  
 ⚡ Exploring **mobile apps, web dev, embedded systems, and computer vision**  
-📚 Currently learning **React, Arduino, and computer science fundamentals**  
-🤖 Experienced with **basic TensorFlow, OpenCV, and deep learning concepts using Python**  
-🚀 Working on projects in **fitness tech, automation, and smart devices**  
+📚 Currently learning **React, Deep Learning,OpenCV and computer science fundamentals**  
+🤖 Experienced with **Python, Unity & MIT app Inventor**  
+🚀 Working on projects in [**PC Pirate Game using Unity**](https://github.com/hzng/Pirategame)  
 
 ### ⚙️ Tech Stack  
 - ESP32, Arduino  
-- HTML, CSS, JavaScript  
+- [HTML, CSS](https://github.com/hzng/HTML-projects), [JavaScript](https://github.com/hzng/JavaScript)  
 - Unity Engine (C#)  
 - C, C++  
 - MIT App Inventor  
-- Python (TensorFlow, OpenCV, Deep Learning basics)  
+- [Python (TensorFlow, OpenCV, Deep Learning basics)](https://github.com/hzng/TensorFlow)  
 
 ### 🏆 Competitions  
 - **YIC 2024 (State Level)** – Gold placement 🥇 with *Hozu Fitness* (MIT App Inventor)  
 - **YIC 2024 (National Level)** – Top 15 Finalist 🎖️ with *Hozu Fitness* (MIT App Inventor)  
 - **World Youth Scientist Innovation Invention 2025** – Gold placement 🥇 with *Hozu Fitness* (MIT App Inventor)  
 - **Next Gen Teen Exchange 2025 (Lab 1)** – Winner 🏆 with *Shopping Spree* (GDevelop)  
-- **Next Gen Teen Exchange 2025 (Lab 2)** – Winner 🏆 with *Fraudline* (Unity Engine & Tilt Five)  
-- **Next Gen Teen Exchange 2025 (Finalist Camp)** – Winner 🏆 with *Fraudline* (Unity Engine & Tilt Five)  
+- **Next Gen Teen Exchange 2025 (Lab 2)** – Winner 🏆 with *[Fraudline* (Unity Engine & Tilt Five)](https://github.com/catAnnoyed/Fraudline)
+- **Next Gen Teen Exchange 2025 (Finalist Camp)** – Winner 🏆 with *[Fraudline* (Unity Engine & Tilt Five)](https://github.com/catAnnoyed/Fraudline)  
 
 🌱 Always curious, always building  
 <h3 align="left">Languages and Tools:</h3>
