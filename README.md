@@ -18,7 +18,8 @@
 ### ⚙️ Tech Stack  
 - ESP32, Arduino  
 - [HTML, CSS](https://github.com/hzng/HTML-projects), [JavaScript](https://github.com/hzng/JavaScript)  
-- Unity Engine (C#)  
+- Unity Engine (C#)
+- [Blender](https://github.com/hzng/Blender-project)
 - C, C++  
 - MIT App Inventor  
 - [Python (TensorFlow, OpenCV, Deep Learning basics)](https://github.com/hzng/TensorFlow)  
