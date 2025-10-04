@@ -24,9 +24,9 @@
 - [Python (TensorFlow, OpenCV, Deep Learning basics)](https://github.com/hzng/TensorFlow)  
 
 ### 🏆 Competitions  
-- **YIC 2024 (State Level)** – Gold placement 🥇 with *Hozu Fitness* (MIT App Inventor)  
-- **YIC 2024 (National Level)** – Top 15 Finalist 🎖️ with *Hozu Fitness* (MIT App Inventor)  
-- **World Youth Scientist Innovation Invention 2025** – Gold placement 🥇 with *Hozu Fitness* (MIT App Inventor)  
+- **YIC 2024 (State Level)** – Gold placement 🥇 with [*Hozu Fitness* (MIT App Inventor)](https://github.com/hzng/Hozu)  
+- **YIC 2024 (National Level)** – Top 15 Finalist 🎖️ with [*Hozu Fitness* (MIT App Inventor)](https://github.com/hzng/Hozu)  
+- **World Youth Scientist Innovation Invention 2025** – Gold placement 🥇 with [*Hozu Fitness* (MIT App Inventor)](https://github.com/hzng/Hozu)   
 - **Next Gen Teen Exchange 2025 (Lab 1)** – Winner 🏆 with *Shopping Spree* (GDevelop)  
 - **Next Gen Teen Exchange 2025 (Lab 2)** – Winner 🏆 with *[Fraudline* (Unity Engine & Tilt Five)](https://github.com/catAnnoyed/Fraudline)
 - **Next Gen Teen Exchange 2025 (Finalist Camp)** – Winner 🏆 with *[Fraudline* (Unity Engine & Tilt Five)](https://github.com/catAnnoyed/Fraudline)  
