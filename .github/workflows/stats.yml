@@ -162,5 +162,6 @@ EOF
             echo "No changes to commit"
           else
             git commit -m "Update GitHub stats"
+            git pull --rebase origin main
             git push
           fi
