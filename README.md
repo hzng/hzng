@@ -1,12 +1,5 @@
 <div align="center">
 
-<!-- Banner -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/hzng_github_banner.png">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/hzng_github_banner_light.png">
-  <img alt="Hong Zhe Banner" src="./assets/hzng_github_banner.png" width="100%">
-</picture>
-
 <!-- Animated Typing Header -->
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=F7B801&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B%2C+I'm+Hong+Zhe;CS+Student+%40+De+Anza+College;AI+%7C+ML+%7C+Full+Stack+Developer;Hackathon+Enthusiast+%F0%9F%8F%86" alt="Typing SVG" /></a>
 

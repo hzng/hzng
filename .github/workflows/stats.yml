@@ -17,13 +17,37 @@ jobs:
       - name: Download Stats Cards
         run: |
           mkdir -p assets
-          curl -s "https://github-readme-stats.vercel.app/api?username=hzng&show_icons=true&theme=radical&hide_border=true&hide_title=true&card_width=320" > assets/stats.svg
-          curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=hzng&layout=compact&theme=radical&hide_border=true&hide_title=true&card_width=320&langs_count=6" > assets/top-langs.svg
+          download_with_retry() {
+            local url=$1
+            local output=$2
+            local max_attempts=3
+            local attempt=1
+            while [ $attempt -le $max_attempts ]; do
+              echo "Attempt $attempt/$max_attempts: Downloading $output..."
+              if curl -fL --retry 2 --retry-delay 5 "$url" -o "$output"; then
+                if [ -s "$output" ]; then
+                  echo "Successfully downloaded $output"
+                  return 0
+                fi
+              fi
+              echo "Attempt $attempt failed, retrying in 10s..."
+              sleep 10
+              attempt=$((attempt + 1))
+            done
+            echo "Failed to download $output after $max_attempts attempts"
+            return 1
+          }
+          download_with_retry "https://github-readme-stats.vercel.app/api?username=hzng&show_icons=true&theme=radical&hide_border=true&hide_title=true&card_width=320" assets/stats.svg
+          download_with_retry "https://github-readme-stats.vercel.app/api/top-langs/?username=hzng&layout=compact&theme=radical&hide_border=true&hide_title=true&card_width=320&langs_count=6" assets/top-langs.svg
 
       - name: Commit & Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/
-          git commit -m "Update GitHub stats" || exit 0
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update GitHub stats"
+            git push
+          fi
