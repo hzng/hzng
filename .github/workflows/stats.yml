@@ -16,140 +16,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
       - name: Generate Stats Cards
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -euo pipefail
-          mkdir -p assets
-          
-          # Fetch user data via GitHub API
-          echo "Fetching user data..."
-          USER_DATA=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/users/hzng")
-          
-          # Fetch repos for language stats
-          echo "Fetching repos..."
-          REPOS_DATA=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/users/hzng/repos?per_page=100&type=owner")
-          
-          # Extract stats
-          PUBLIC_REPOS=$(echo "$USER_DATA" | jq -r '.public_repos')
-          FOLLOWERS=$(echo "$USER_DATA" | jq -r '.followers')
-          TOTAL_STARS=$(echo "$REPOS_DATA" | jq '[.[] | .stargazers_count] | add // 0')
-          TOTAL_FORKS=$(echo "$REPOS_DATA" | jq '[.[] | .forks_count] | add // 0')
-          
-          # Calculate language stats
-          echo "Calculating language stats..."
-          LANGS_JSON=$(echo "$REPOS_DATA" | jq -r '.[].languages_url' | while read url; do
-            curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github.v3+json" "$url"
-          done | jq -s 'add // {} | to_entries | sort_by(-.value) | .[0:6] | from_entries')
-          
-          # Generate stats.svg
-          cat > assets/stats.svg <<EOF
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="165" viewBox="0 0 320 165">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e1e2e"/>
-      <stop offset="100%" style="stop-color:#16161e"/>
-    </linearGradient>
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#f7b801"/>
-      <stop offset="100%" style="stop-color:#ff6b00"/>
-    </linearGradient>
-  </defs>
-  <rect width="320" height="165" fill="url(#bg)" rx="8"/>
-  <rect x="4" y="4" width="312" height="157" fill="none" stroke="#2d2d3d" stroke-width="1" rx="6"/>
-  
-  <!-- Title -->
-  <text x="160" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="url(#titleGrad)">Hong Zhe's GitHub Stats</text>
-  
-  <!-- Stats grid -->
-  <g font-family="system-ui, sans-serif">
-    <!-- Public Repos -->
-    <rect x="20" y="50" width="120" height="50" rx="6" fill="#1e1e2e" stroke="#2d2d3d"/>
-    <text x="80" y="78" text-anchor="middle" font-size="24" font-weight="bold" fill="#f7b801">$PUBLIC_REPOS</text>
-    <text x="80" y="95" text-anchor="middle" font-size="11" fill="#888">Public Repos</text>
-    
-    <!-- Followers -->
-    <rect x="180" y="50" width="120" height="50" rx="6" fill="#1e1e2e" stroke="#2d2d3d"/>
-    <text x="240" y="78" text-anchor="middle" font-size="24" font-weight="bold" fill="#f7b801">$FOLLOWERS</text>
-    <text x="240" y="95" text-anchor="middle" font-size="11" fill="#888">Followers</text>
-    
-    <!-- Stars -->
-    <rect x="20" y="115" width="120" height="40" rx="6" fill="#1e1e2e" stroke="#2d2d3d"/>
-    <text x="80" y="137" text-anchor="middle" font-size="20" font-weight="bold" fill="#f7b801">$TOTAL_STARS</text>
-    <text x="80" y="150" text-anchor="middle" font-size="11" fill="#888">Total Stars</text>
-    
-    <!-- Forks -->
-    <rect x="180" y="115" width="120" height="40" rx="6" fill="#1e1e2e" stroke="#2d2d3d"/>
-    <text x="240" y="137" text-anchor="middle" font-size="20" font-weight="bold" fill="#f7b801">$TOTAL_FORKS</text>
-    <text x="240" y="150" text-anchor="middle" font-size="11" fill="#888">Total Forks</text>
-  </g>
-</svg>
-EOF
-          
-          # Generate top-langs.svg
-          LANG_ITEMS=$(echo "$LANGS_JSON" | jq -r 'to_entries[] | "\(.key):\(.value)"')
-          
-          # Build language bars
-          LANG_BARS=""
-          MAX_VAL=$(echo "$LANGS_JSON" | jq -r 'map(.value) | max // 1')
-          Y_POS=45
-          while IFS=: read -r lang val; do
-            [ -z "$lang" ] && continue
-            WIDTH=$(echo "scale=0; $val * 240 / $MAX_VAL" | bc)
-            # Color mapping
-            case "$lang" in
-              "Python") COLOR="#3776AB" ;;
-              "JavaScript") COLOR="#F7DF1E" ;;
-              "TypeScript") COLOR="#3178C6" ;;
-              "C") COLOR="#00599C" ;;
-              "C++") COLOR="#00599C" ;;
-              "C#") COLOR="#239120" ;;
-              "HTML") COLOR="#E34F26" ;;
-              "CSS") COLOR="#1572B6" ;;
-              "Vue") COLOR="#42b883" ;;
-              "Rust") COLOR="#dea584" ;;
-              "Go") COLOR="#00ADD8" ;;
-              "Java") COLOR="#ED8B00" ;;
-              "PHP") COLOR="#777BB4" ;;
-              "Shell") COLOR="#4EAA25" ;;
-              *) COLOR="#888" ;;
-            esac
-            LANG_BARS="${LANG_BARS}<rect x=\"30\" y=\"$Y_POS\" width=\"$WIDTH\" height=\"18\" rx=\"3\" fill=\"$COLOR\"/><text x=\"28\" y=\"$((Y_POS + 13))\" text-anchor=\"end\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#ccc\">$lang</text><text x=\"$((WIDTH + 35))\" y=\"$((Y_POS + 13))\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"$COLOR\">$val</text>"
-            Y_POS=$((Y_POS + 24))
-          done <<< "$LANG_ITEMS"
-          
-          cat > assets/top-langs.svg <<EOF
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="165" viewBox="0 0 320 165">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e1e2e"/>
-      <stop offset="100%" style="stop-color:#16161e"/>
-    </linearGradient>
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#f7b801"/>
-      <stop offset="100%" style="stop-color:#ff6b00"/>
-    </linearGradient>
-  </defs>
-  <rect width="320" height="165" fill="url(#bg)" rx="8"/>
-  <rect x="4" y="4" width="312" height="157" fill="none" stroke="#2d2d3d" stroke-width="1" rx="6"/>
-  
-  <!-- Title -->
-  <text x="160" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="url(#titleGrad)">Most Used Languages</text>
-  
-  $LANG_BARS
-</svg>
-EOF
-          
-          echo "=== Verifying files ==="
-          ls -la assets/
-          cat assets/stats.svg
-          echo ""
-          cat assets/top-langs.svg
+          python .github/scripts/generate_stats.py
 
       - name: Commit & Push
         run: |
@@ -160,6 +36,6 @@ EOF
             echo "No changes to commit"
           else
             git commit -m "Update GitHub stats"
-            git pull --rebase origin main --autostash
+            git pull --rebase origin main --autostash || true
             git push --force-with-lease
           fi
