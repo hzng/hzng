@@ -156,6 +156,11 @@ currently_learning:
 
 <div align="center">
 
+<!-- Contribution Graph -->
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=hzng&theme=github-compact" width="100%" />
+
+<br/><br/>
+
 <!-- Streak Stats -->
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=hzng&theme=radical&hide_border=true&border_radius=8" width="700" />
 
