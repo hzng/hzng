@@ -21,41 +21,48 @@ jobs:
           set -euo pipefail
           mkdir -p assets
           
-          # Try primary service first, fallback to alternative
-          download_with_fallback() {
-            local primary_url=$1
-            local fallback_url=$2
-            local output=$3
+          # Try multiple services in order
+          download_with_multiple_fallbacks() {
+            local output=$1
+            shift
+            local urls=("$@")
             
-            echo "Trying primary: $primary_url"
-            if curl -fL --retry 3 --retry-delay 10 --connect-timeout 30 --max-time 60 "$primary_url" -o "$output"; then
-              if [ -s "$output" ]; then
-                echo "Success with primary ($(wc -c < "$output") bytes)"
-                return 0
+            for url in "${urls[@]}"; do
+              echo "Trying: $url"
+              if curl -fL --retry 2 --retry-delay 5 --connect-timeout 30 --max-time 60 "$url" -o "$output"; then
+                if [ -s "$output" ]; then
+                  echo "Success ($(wc -c < "$output") bytes): $url"
+                  return 0
+                else
+                  echo "Empty file from: $url"
+                fi
+              else
+                echo "Failed: $url (exit code $?)"
               fi
-            fi
-            echo "Primary failed, trying fallback: $fallback_url"
-            if curl -fL --retry 3 --retry-delay 10 --connect-timeout 30 --max-time 60 "$fallback_url" -o "$output"; then
-              if [ -s "$output" ]; then
-                echo "Success with fallback ($(wc -c < "$output") bytes)"
-                return 0
-              fi
-            fi
-            echo "Both primary and fallback failed"
+            done
+            echo "All URLs failed for $output"
             return 1
           }
           
+          STATS_URLS=(
+            "https://github-readme-stats.vercel.app/api?username=hzng&show_icons=true&theme=radical&hide_border=true&hide_title=true&card_width=320"
+            "https://github-readme-stats-sigma.vercel.app/api?username=hzng&show_icons=true&theme=radical&hide_border=true&hide_title=true&card_width=320"
+            "https://github-readme-stats-eight.vercel.app/api?username=hzng&show_icons=true&theme=radical&hide_border=true&hide_title=true&card_width=320"
+            "https://gh-stats.vercel.app/api?username=hzng&show_icons=true&theme=radical&hide_border=true&hide_title=true&card_width=320"
+          )
+          
+          LANGS_URLS=(
+            "https://github-readme-stats.vercel.app/api/top-langs/?username=hzng&layout=compact&theme=radical&hide_border=true&hide_title=true&card_width=320&langs_count=6"
+            "https://github-readme-stats-sigma.vercel.app/api/top-langs?username=hzng&layout=compact&theme=radical&hide_border=true&hide_title=true&card_width=320&langs_count=6"
+            "https://github-readme-stats-eight.vercel.app/api/top-langs?username=hzng&layout=compact&theme=radical&hide_border=true&hide_title=true&card_width=320&langs_count=6"
+            "https://gh-stats.vercel.app/api/top-langs?username=hzng&layout=compact&theme=radical&hide_border=true&hide_title=true&card_width=320&langs_count=6"
+          )
+          
           echo "=== Downloading stats.svg ==="
-          download_with_fallback \
-            "https://github-readme-stats.vercel.app/api?username=hzng&show_icons=true&theme=radical&hide_border=true&hide_title=true&card_width=320" \
-            "https://github-readme-stats-sigma.vercel.app/api?username=hzng&show_icons=true&theme=radical&hide_border=true&hide_title=true&card_width=320" \
-            assets/stats.svg
+          download_with_multiple_fallbacks assets/stats.svg "${STATS_URLS[@]}"
           
           echo "=== Downloading top-langs.svg ==="
-          download_with_fallback \
-            "https://github-readme-stats.vercel.app/api/top-langs/?username=hzng&layout=compact&theme=radical&hide_border=true&hide_title=true&card_width=320&langs_count=6" \
-            "https://github-readme-stats-sigma.vercel.app/api/top-langs/?username=hzng&layout=compact&theme=radical&hide_border=true&hide_title=true&card_width=320&langs_count=6" \
-            assets/top-langs.svg
+          download_with_multiple_fallbacks assets/top-langs.svg "${LANGS_URLS[@]}"
           
           echo "=== Verifying files ==="
           ls -la assets/
