@@ -1,8 +1,8 @@
-name: Update Stats
+name: Generate GitHub Stats
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # Daily at 3 AM UTC
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -14,26 +14,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate Stats Card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: stats
-          options: username=hzng&show_icons=true&theme=radical&hide_border=true&hide_title=true&card_width=320
-          path: assets/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate Top Languages Card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: top-langs
-          options: username=hzng&layout=compact&theme=radical&hide_border=true&hide_title=true&card_width=320&langs_count=6
-          path: assets/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download Stats Cards
+        run: |
+          mkdir -p assets
+          curl -s "https://github-readme-stats.vercel.app/api?username=hzng&show_icons=true&theme=radical&hide_border=true&hide_title=true&card_width=320" > assets/stats.svg
+          curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=hzng&layout=compact&theme=radical&hide_border=true&hide_title=true&card_width=320&langs_count=6" > assets/top-langs.svg
 
       - name: Commit & Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/*.svg
-          git commit -m "Update stats" || exit 0
+          git add assets/
+          git commit -m "Update GitHub stats" || exit 0
           git push
