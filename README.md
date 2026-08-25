@@ -1,88 +1,150 @@
 <div align="center">
-  
-# 👋 Hi, I'm Hong Zhe
 
-### 🎓 Computer Science Student @ De Anza College | 🤖 AI/ML Enthusiast | 🚀 Future Startup Founder
+<!-- Banner -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hzng_github_banner.png">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hzng_github_banner_light.png">
+  <img alt="Hong Zhe Banner" src="./assets/hzng_github_banner.png" width="100%">
+</picture>
 
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/hz.2707)
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hong-zhe-ng-0777032b2/)
-[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hzng)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hzngstreamer@gmail.com)
+<!-- Animated Typing Header -->
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=F7B801&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B%2C+I'm+Hong+Zhe;CS+Student+%40+De+Anza+College;AI+%7C+ML+%7C+Full+Stack+Developer;Hackathon+Enthusiast+%F0%9F%8F%86" alt="Typing SVG" /></a>
 
-<img src="https://komarev.com/ghpvc/?username=hzng&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+<!-- Profile Views -->
+<p>
+  <img src="https://komarev.com/ghpvc/?username=hzng&label=Profile%20Views&color=F7B801&style=flat" alt="Profile Views" />
+</p>
+
+<!-- Social Badges -->
+<p>
+  <a href="https://www.linkedin.com/in/hong-zhe-ng-0777032b2/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://instagram.com/hz.2707">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+  </a>
+  <a href="mailto:hzngstreamer@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+</p>
 
 </div>
 
 ---
 
-## 🎯 About Me
+## 🧑‍💻 About Me
 
-> "Building the future with code, one project at a time"
-
-I'm a passionate programmer who started coding at age 11 and haven't stopped since. Currently focused on mastering full-stack development and diving deep into AI/ML. My journey has taken me from Arduino boards to VR games, and now to the exciting world of machine learning and web applications.
-
-- 🔭 **Currently working on:** Money Manager App (React, Supabase, TypeScript)
-- 🌱 **Currently learning:** The Odin Project, Prompt Engineering, Agentic AI
-- 🎯 **Future goals:** Specialize in AI/ML, build a startup
-- ⚡ **Fun fact:** Started programming before I was a teenager!
-
----
-
-## 🛠️ Skills Timeline
-
-### 🔙 Past Experience
-```mermaid
-graph LR
-    A[Programming Since Age 11] --> B[Arduino/C++]
-    B --> C[ESP32/PlatformIO]
-    C --> D[Game Dev/GDevelop]
-    D --> E[VR/Unity C#]
-    E --> F[Python/ML Libraries]
+```yaml
+name: Hong Zhe
+education: Computer Science @ De Anza College
+location: "Building the future, one commit at a time"
+interests:
+  - Artificial Intelligence & Machine Learning
+  - Full Stack Web Development
+  - VR/AR Game Development
+  - Hackathons & Startup Culture
+currently_learning:
+  - "The Odin Project (Full Stack)"
+  - Prompt Engineering & Agentic AI
+  - College Mathematics (Calculus, Linear Algebra)
 ```
 
-<details>
-<summary><b>📚 Detailed Past Skills</b></summary>
-<br>
-
-| Category | Technologies |
-|----------|-------------|
-| **Embedded Systems** | Arduino with C++, ESP32 with PlatformIO |
-| **Game Development** | GDevelop, Unity Engine (C#), VR Development |
-| **Mobile Development** | MIT App Inventor |
-| **Web Foundations** | HTML, CSS, JavaScript |
-| **Python Libraries** | Matplotlib, Pandas, Seaborn, Streamlit |
-| **Machine Learning** | Keras, XGBoost, Scikit-learn, Ollama, Hugging Face |
-| **3D Modeling** | Blender |
-
-</details>
-
-### 🟢 Present Focus
-| Skill | Details |
-|-------|---------|
-| **Prompt Engineering** | Skills development, Agentic loops |
-| **Vibe Coding** | Money Manager App with React, Supabase, TypeScript, TailwindCSS |
-| **Full Stack Dev** | Following The Odin Project curriculum |
-| **Competitive Coding** | Exploring hackathons |
-
-### 🔮 Future Goals
-- 📐 Excel in college mathematics (Calculus, Linear Algebra)
-- 🤖 Specialize in AI & Machine Learning
-- 🚀 Build a startup with a great team
+> 🎯 **Mission:** Specialize in AI & ML, find a team, and build a startup that matters.
 
 ---
 
-## 🏆 Achievements & Awards
+## ⏳ My Journey
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+
+### 🕰️ Past
+- 💻 Programming since **age 11**
+- 🤖 **Chumbaka Asia Certified:**
+  - Arduino (C++)
+  - ESP32 (PlatformIO)
+  - Mobile Apps (MIT App Inventor)
+- 🎮 Game Dev with **GDevelop** — *Created a course for Chumbaka*
+- 🥽 **VR Development** with Unity (C#)
+- 🐍 Python ecosystem: Matplotlib, Pandas, Seaborn, Streamlit, Keras, XGBoost, Scikit-learn, Ollama, Hugging Face
+
+  </td>
+  <td width="33%" valign="top">
+
+### ⚡ Present
+- 🧠 Mastering **Prompt Engineering** & Agentic Loops
+- 💰 Vibe-coding a **Money Manager App** *(React, Supabase, TypeScript, TailwindCSS)*
+- 🏃 Exploring **Hackathons**
+- 📚 Started **The Odin Project** for full-stack mastery
+
+  </td>
+  <td width="33%" valign="top">
+
+### 🚀 Future
+- 📐 Excel at **College Math** (Calculus, Linear Algebra)
+- 🤖 **Specialize in AI & ML**
+- 🚀 **Find a team & build a startup**
+
+  </td>
+  </tr>
+</table>
+
+---
+
+## 🛠️ Tech Stack
+
+### Languages
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C"/>
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++"/>
+  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+</p>
+
+### Frameworks & Libraries
+<p>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS"/>
+  <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" alt="Unity"/>
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/>
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+  <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/>
+  <img src="https://img.shields.io/badge/XGBoost-EB5424?style=for-the-badge&logo=xgboost&logoColor=white" alt="XGBoost"/>
+</p>
+
+### Tools & Platforms
+<p>
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino"/>
+  <img src="https://img.shields.io/badge/PlatformIO-F5822A?style=for-the-badge&logo=platformio&logoColor=white" alt="PlatformIO"/>
+  <img src="https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white" alt="Blender"/>
+  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code"/>
+  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama"/>
+  <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face"/>
+</p>
+
+---
+
+## 🏆 Achievements & Competitions
 
 <div align="center">
 
-| Competition | Level | Achievement |
-|-------------|-------|-------------|
-| **YIC 2024** | State Level | 🥇 Gold Placement |
-| **YIC 2024** | National Level | 🎖️ Top 15 Finalist |
-| **World Youth Scientist Innovation Invention 2025** | International | 🥇 Gold Placement |
-| **Next Gen Teen Exchange 2025** | Lab 1 | 🏆 Winner |
-| **Next Gen Teen Exchange 2025** | Lab 2 | 🏆 Winner |
-| **Next Gen Teen Exchange 2025** | Finalist Camp | 🏆 Winner |
+| Competition | Level | Result |
+|-------------|-------|--------|
+| **YIC 2024** | State Level | 🥇 **Gold Placement** |
+| **YIC 2024** | National Level | 🎖️ **Top 15 Finalist** |
+| **World Youth Scientist Innovation Invention 2025** | International Level | 🥇 **Gold Placement** |
+| **Next Gen Teen Exchange 2025 (Lab 1)** | — | 🏆 **Winner** |
+| **Next Gen Teen Exchange 2025 (Lab 2)** | — | 🏆 **Winner** |
+| **Next Gen Teen Exchange 2025 (Finalist Camp)** | — | 🏆 **Winner** |
 
 </div>
 
@@ -90,95 +152,47 @@ graph LR
 
 ## 💼 Experience
 
-### **Chumbaka Asia** - HQ Research & Development Intern
-*📍 2 Months (2026)*
-- Contributed to R&D projects at the headquarters
-- Developed "Game Design with GDevelop" course
-- Certified by Chumbaka Asia in multiple technologies
+**🔬 HQ Research & Development Intern** @ **Chumbaka Asia** *(2026 — 2 months)*
+- Developed curriculum and technical content
+- Worked with Arduino, ESP32, and IoT solutions
+- Contributed to ed-tech innovation in Asia
 
 ---
 
-## 📊 GitHub Statistics
+## 📊 GitHub Stats
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=hzng&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9" alt="GitHub Stats" width="48%" />
+<!-- Streak Stats -->
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=hzng&theme=radical&hide_border=true&border_radius=8" width="700" />
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=hzng&theme=dark&hide_border=true&background=0D1117&stroke=58A6FF&ring=58A6FF&fire=FF6B6B&currStreakLabel=58A6FF" alt="GitHub Streak" width="48%" />
+<br/><br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hzng&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9" alt="Top Languages" width="38%" />
-
-</div>
-
-### 🏅 GitHub Trophies
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=hzng&theme=darkhub&no-frame=true&column=7&margin-w=15&margin-h=15)](https://github.com/ryo-ma/github-profile-trophy)
+<!-- Static SVGs generated by GitHub Actions (reliable, no rate limits) -->
+<img height="165" src="./assets/stats.svg" />
+&nbsp;&nbsp;
+<img height="165" src="./assets/top-langs.svg" />
 
 </div>
 
 ---
 
-## 💻 Tech Stack
+## 🌐 Connect With Me
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/hong-zhe-ng-0777032b2/">
+    <img src="https://img.shields.io/badge/LinkedIn-Hong%20Zhe%20Ng-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://instagram.com/hz.2707">
+    <img src="https://img.shields.io/badge/Instagram-@hz.2707-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+  </a>
+  <a href="mailto:hzngstreamer@gmail.com">
+    <img src="https://img.shields.io/badge/Email-hzngstreamer@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+</p>
 
 <div align="center">
 
-### Languages
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-
-### Frameworks & Libraries
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-
-### Tools & Platforms
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white)
-![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
-![Blender](https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+### 💡 *"Code is like humor. When you have to explain it, it's bad."* — Cory House
 
 </div>
-
----
-
-## 📈 Activity Graph
-
-<div align="center">
-
-[![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=hzng&theme=github-dark&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=FFFFFF)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-</div>
-
----
-
-## 📫 Let's Connect!
-
-<div align="center">
-
-I'm always open to collaborating on interesting projects, hackathons, or just having a chat about tech!
-
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/hz.2707)
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hong-zhe-ng-0777032b2/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hzngstreamer@gmail.com)
-
-</div>
-
----
-
-<div align="center">
-
-### 💡 "The best way to predict the future is to invent it." - Alan Kay
-
-</div>
-
-The README showcases your impressive journey from young programmer to AI/ML enthusiast with all your achievements! 🚀
