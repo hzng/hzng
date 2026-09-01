@@ -16,7 +16,7 @@
   
   <g font-family="system-ui, sans-serif">
     <rect x="20" y="50" width="120" height="48" rx="6" fill="#1e1e2e" stroke="#2d2d3d"/>
-    <text x="80" y="74" text-anchor="middle" font-size="20" font-weight="bold" fill="#f7b801">7</text>
+    <text x="80" y="74" text-anchor="middle" font-size="20" font-weight="bold" fill="#f7b801">8</text>
     <text x="80" y="90" text-anchor="middle" font-size="10" fill="#888">Public Repos</text>
     
     <rect x="180" y="50" width="120" height="48" rx="6" fill="#1e1e2e" stroke="#2d2d3d"/>
